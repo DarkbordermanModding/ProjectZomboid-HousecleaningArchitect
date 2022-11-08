@@ -1,0 +1,4 @@
+ContextMenu_CH = {
+    ContextMenu_CleanDirt = "清除髒汙",
+    ContextMenu_RepairCrack = "Repair Crack",
+}

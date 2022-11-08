@@ -1,0 +1,4 @@
+ContextMenu_EN = {
+    ContextMenu_CleanDirt = "Clean Dirt",
+    ContextMenu_RepairCrack = "Repair Crack",
+}
