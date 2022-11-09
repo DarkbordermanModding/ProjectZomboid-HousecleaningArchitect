@@ -19,7 +19,9 @@ local function onFixFloorCommand(module, command, player, args)
                                 (luautils.stringStarts(sprite:getParentSprite():getName(), "floors_overlay_tiles") or
                                 luautils.stringStarts(sprite:getParentSprite():getName(), "floors_overlay_wood") or
                                 luautils.stringStarts(sprite:getParentSprite():getName(), "d_streetcrack") or
-                                luautils.stringStarts(sprite:getParentSprite():getName(), "floors_overlay_street")) then
+                                luautils.stringStarts(sprite:getParentSprite():getName(), "floors_overlay_street") or
+                                luautils.stringStarts(sprite:getParentSprite():getName(), "d_wallcrack")
+                            ) then
                                 object:RemoveAttachedAnim(n-1)
                                 object:transmitUpdatedSpriteToClients()
                             end
