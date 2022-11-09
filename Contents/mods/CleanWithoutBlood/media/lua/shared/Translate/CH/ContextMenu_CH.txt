@@ -1,4 +1,4 @@
 ContextMenu_CH = {
     ContextMenu_CleanDirt = "清除髒汙",
-    ContextMenu_FixFloor = "Repair Crack",
+    ContextMenu_FixFloor = "維修表面",
 }
