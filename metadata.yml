@@ -1,0 +1,21 @@
+github:
+  description: Cleaning filth easily in Project Zomboid
+  enable_discussions: false
+  enable_issues: false
+  enable_projects: false
+  enable_wiki: false
+  homepage: https://github.com/DarkbordermanModding/ProjectZomboid-HousecleaningArchitect
+  template: false
+  topics:
+    - mod
+    - project-zomboid
+workshop:
+  app_id: 108600
+  publishedfield_id: 2822994749
+  title: "[B42.13 SP] HousecleaningArchitect"
+  description: |
+    [B42.13 SP] HousecleaningArchitect
+  visibility: 3
+  preview_path: preview.png
+  content_folder: "./"
+  tags: [Build 42, Balance, Building, Misc]

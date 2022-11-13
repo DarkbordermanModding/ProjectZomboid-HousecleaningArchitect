@@ -1,0 +1,8 @@
+# Environments
+.env
+
+# Steam artifacts
+workshop.vdf
+
+# Starbound artifacts
+*/*.pak
