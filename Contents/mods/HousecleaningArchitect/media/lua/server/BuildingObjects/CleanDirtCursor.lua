@@ -13,7 +13,7 @@ local function doCleanDirtMenu(player, square)
 		else -- broom/mop equipped in both hands
 			luautils.equipItems(player, item)
 		end
-		ISTimedActionQueue.add(CleanDirtAction:new(player, square, 225));
+		ISTimedActionQueue.add(CleanDirtAction:new(player, square, 100));
 	end
 end
 
