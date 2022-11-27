@@ -1,4 +1,7 @@
---[[require('luautils');
+--Scripts for testing
+
+--[[
+require('luautils');
 
 local square = getPlayer():getSquare()
 
@@ -12,4 +15,12 @@ for i = 0,square:getObjects():size()-1 do
     end
   end
 end
+]]--
+
+--[[
+local square = getPlayer():getSquare()
+
+square:addFloor(
+  "floors_exterior_natural_01_1"
+)
 ]]--
