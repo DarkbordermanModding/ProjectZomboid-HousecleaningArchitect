@@ -11,15 +11,11 @@
 
 1. Create environment variables
 ```
-cp sample.env
+cp sample.env .env
 ```
+And fill in workshop item information
 
-2. Build `config.vdf` for uploading the workshop item
-```
-make generate_vdf
-```
-
-3. Publish to Steam workshop
+2. Publish to Steam workshop
 ```
 make upload_workshop
 ```
