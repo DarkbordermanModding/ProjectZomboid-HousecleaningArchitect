@@ -9,7 +9,7 @@ local function doCleanDirtMenu(player, square)
 		ISWorldObjectContextMenu.transferIfNeeded(player, item)
 		-- dish clothes will be doing a low animation
 		if item:getType() == "DishCloth" or item:getType() == "BathTowel" then
-            luautils.equipItems(player, item)
+			luautils.equipItems(player, item)
 		else -- broom/mop equipped in both hands
 			luautils.equipItems(player, item)
 		end
