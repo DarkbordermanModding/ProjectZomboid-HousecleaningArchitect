@@ -1,7 +1,7 @@
 require('luautils');
 
 local function predicateNotBroken(item)
-	return not item:isBroken()
+  return not item:isBroken()
 end
 
 local function onFixFloorMenu(worldobjects, square, player)
@@ -32,10 +32,10 @@ local function addFixFloorMenu(player, context, worldobjects)
     square = v:getSquare();
   end
 
-	if not square then return end
+  if not square then return end
 
-	for i=0,square:getObjects():size()-1 do
-		local object = square:getObjects():get(i);
+  for i=0,square:getObjects():size()-1 do
+    local object = square:getObjects():get(i);
 
     if object then
       local attached = object:getAttachedAnimSprite()
@@ -57,7 +57,7 @@ local function addFixFloorMenu(player, context, worldobjects)
         end
       end
     end
-	end
+  end
 
   if not target then return end
 
