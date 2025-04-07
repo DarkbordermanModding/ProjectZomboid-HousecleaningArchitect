@@ -1,4 +1,7 @@
-name=Housecleaning architect
+name=[B42]Housecleaning architect
+author=Darkborderman
 poster=poster.png
-id=HousecleaningArchitect
+id=darkborderman.HousecleaningArchitect
 description=Utility mod that can Clean dirt and blood, repair floor and wall.
+modversion=0.0.0
+versionMin=42.0.0
