@@ -15,8 +15,18 @@ local function addFixFloorMenu(player, context, worldobjects)
   local target;
 
   if player:getVehicle() then return end
-
-  if not inventory:containsTypeEvalRecurse("Hammer", predicateNotBroken) then return end
+  if not (
+    inventory:contains("Hammer") or
+    inventory:contains("HammerForged") or
+    inventory:contains("BallPeenHammer") or
+    inventory:contains("BallPeenHammerForged") or
+    inventory:contains("ClubHammer") or
+    inventory:contains("ClubHammerForged") or
+    inventory:contains("SmithingHammer") or
+    inventory:contains("HammerStone")
+  ) then
+    return
+  end
 
   for i,v in ipairs(worldobjects) do
     square = v:getSquare();
