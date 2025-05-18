@@ -6,11 +6,11 @@ end
 
 local function addCleanDirtMenu(player, context, worldobjects)
   local player = getSpecificPlayer(player);
+  if player:getVehicle() then return end
+
   local inventory = player:getInventory();
   local square;
   local target;
-
-  if player:getVehicle() then return end
 
   if not (
     inventory:containsTypeRecurse("BathTowel") or
@@ -35,6 +35,7 @@ local function addCleanDirtMenu(player, context, worldobjects)
         if attached then
           for n=1,attached:size() do
             local sprite = attached:get(n-1)
+            print(sprite:getParentSprite():getName())
             if sprite and sprite:getParentSprite() and sprite:getParentSprite():getName() and
               (
                 luautils.stringStarts(sprite:getParentSprite():getName(), "overlay_grime") or
@@ -56,7 +57,4 @@ local function addCleanDirtMenu(player, context, worldobjects)
   context:addOption(getText('ContextMenu_CleanDirt'), worldobjects, onCleanDirtMenu, square, player);
 end
 
--- ------------------------------------------------
--- Game hooks
--- ------------------------------------------------
 Events.OnFillWorldObjectContextMenu.Add(addCleanDirtMenu);
