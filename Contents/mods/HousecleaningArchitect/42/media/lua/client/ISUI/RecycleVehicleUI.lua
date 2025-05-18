@@ -113,6 +113,7 @@ function RecycleVehicle.UI.FillMenuOutsideVehicle(player, context, vehicle)
     --     option = context:getOptionFromName(getText("ContextMenu_RemoveBurntVehicle"))
     -- end
     local propaneNeeded = 10
+    local playerObj = getSpecificPlayer(player)
     if option then
         option.name = optionText
         option.target = player
@@ -120,7 +121,7 @@ function RecycleVehicle.UI.FillMenuOutsideVehicle(player, context, vehicle)
         option.param1 = vehicle
         option.param2 = propaneNeeded
     else
-        option = context:addOption(optionText, player, onRecycleVehicle, vehicle, propaneNeeded)
+        option = context:addOption(optionText, playerObj, ISVehicleMenu.onRemoveBurntVehicle, vehicle)
     end
 
     local toolTip = ISToolTip:new()
@@ -132,7 +133,6 @@ function RecycleVehicle.UI.FillMenuOutsideVehicle(player, context, vehicle)
     local text = getText("Tooltip_VehicleRecycling") .. " <LINE> "
     local notAvailable = false
 
-    local playerObj = getSpecificPlayer(player)
     if playerObj:getInventory():containsTypeRecurse("WeldingMask") then
         text = text .. " <LINE> <RGB:1,1,1> " .. getItemNameFromFullType("Base.WeldingMask")
     else
