@@ -1,10 +1,10 @@
 require('luautils');
 
-local function onDestroyFloorMenu(worldobjects, square, player)
-  getCell():setDrag(DestroyFloorCursor:new("", "", player), player:getPlayerNum())
+local function onCleanDirtMenu(worldobjects, square, player)
+  getCell():setDrag(CleanDirtCursor:new("", "", player), player:getPlayerNum())
 end
 
-local function addDestroyFloorMenu(player, context, worldobjects)
+local function addCleanDirtMenu(player, context, worldobjects)
   local player = getSpecificPlayer(player);
   if player:getVehicle() then return end
 
@@ -54,7 +54,7 @@ local function addDestroyFloorMenu(player, context, worldobjects)
     if not square:haveBlood() then return end
   end
 
-  context:addOption(getText('ContextMenu_DestroyFloor'), worldobjects, onDestroyFloorMenu, square, player);
+  context:addOption(getText('ContextMenu_CleanDirt'), worldobjects, onCleanDirtMenu, square, player);
 end
 
-Events.OnFillWorldObjectContextMenu.Add(addDestroyFloorMenu);
+Events.OnFillWorldObjectContextMenu.Add(addCleanDirtMenu);
