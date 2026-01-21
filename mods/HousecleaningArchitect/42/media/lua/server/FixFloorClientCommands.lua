@@ -38,6 +38,8 @@ local function onFixFloorCommand(module, command, player, args)
     return
   end
 
+  -- Change to 1~5 levels, so that wall crack can be fixed
+  -- Or maybe separate to independent command later
   for z = args.z, args.z + 5 do
     FixSquare(args.x, args.y, z)
   end
