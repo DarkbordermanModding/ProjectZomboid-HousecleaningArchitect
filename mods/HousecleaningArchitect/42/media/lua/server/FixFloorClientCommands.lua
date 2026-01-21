@@ -1,6 +1,6 @@
 require('luautils');
 
-local function cleanSquare(x, y, z)
+local function FixSquare(x, y, z)
   local sq = getCell():getGridSquare(x, y, z)
   if not sq then return end
 
@@ -39,7 +39,7 @@ local function onFixFloorCommand(module, command, player, args)
   end
 
   for z = args.z, args.z + 5 do
-    cleanSquare(args.x, args.y, z)
+    FixSquare(args.x, args.y, z)
   end
 end
 
