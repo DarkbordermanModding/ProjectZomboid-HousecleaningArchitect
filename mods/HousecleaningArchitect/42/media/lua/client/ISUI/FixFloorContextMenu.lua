@@ -15,6 +15,7 @@ local function addFixFloorMenu(player, context, worldobjects)
   local target;
 
   if player:getVehicle() then return end
+  -- TODO: check hammer tag
   if not (
     inventory:contains("Hammer") or
     inventory:contains("HammerForged") or

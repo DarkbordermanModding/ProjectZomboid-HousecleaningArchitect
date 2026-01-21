@@ -12,6 +12,7 @@ local function addCleanDirtMenu(player, context, worldobjects)
   local square;
   local target;
 
+  -- TODO: check cleanstains tag
   if not (
     inventory:containsTypeRecurse("BathTowel") or
     inventory:containsTypeRecurse("DishCloth") or
