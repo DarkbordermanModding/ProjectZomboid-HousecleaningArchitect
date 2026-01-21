@@ -1,8 +1,1 @@
-# Environments
-.env
-
-# Steam artifacts
-workshop.vdf
-
-# Starbound artifacts
-*/*.pak
+steam_appid.txt
